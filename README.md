@@ -14,8 +14,8 @@ How I learn:
 - [x] **Stage 1:** Project setup, `main()`, `StatelessWidget`, `MaterialApp`, `Scaffold`, `AppBar`
 - [x] **Stage 2:** Basic layout (`Column`, `Row`, `Container`, `Image.asset`, registering assets in `pubspec.yaml`)
 - [x] **Stage 3:** Models and data (`Superhero` class, `enum`, `List`)
-- [ ] **Stage 4:** `ListView.builder` and a custom `HeroTile` widget
-- [ ] **Stage 5:** Navigation to a detail page (`Navigator.push`)
+- [x] **Stage 4:** `ListView.builder` and a custom `HeroTile` widget
+- [x] **Stage 5:** Navigation to a detail page (`Navigator.push`)
 - [ ] **Stage 6:** Detail page styling
 - [ ] **Stage 7:** State and a favorites feature (`ValueNotifier`)
 - [ ] **Stage 8:** Polish and independent practice
