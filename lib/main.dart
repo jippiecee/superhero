@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'data/heroes.dart';
 
 void main() {
   runApp(const SuperheroApp());
@@ -9,6 +10,7 @@ class SuperheroApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final hero = heroes[1];
     return MaterialApp(
       title: 'Superhero',
       debugShowCheckedModeBanner: false,
@@ -21,14 +23,14 @@ class SuperheroApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/images/batman.jpeg',
+              hero.image,
               height: 300,
               width: double.infinity,
               fit: BoxFit.cover,
             ),
             const SizedBox(height: 16,),
-            const Text(
-              'Batman', 
+            Text(
+              hero.name, 
               style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),),
               const SizedBox(height: 16,),
               Row(
@@ -42,9 +44,9 @@ class SuperheroApp extends StatelessWidget {
                       border: Border.all(color: Colors.red, width: 3),
                       borderRadius: BorderRadius.circular(16),
                     ),
-                    child: const Column(
+                    child: Column(
                       children: [
-                        Text('40',
+                        Text('${hero.power}',
                         style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
                         Text('Power'),
                       ],
@@ -58,9 +60,9 @@ class SuperheroApp extends StatelessWidget {
                       border: Border.all(color: Colors.purple, width: 3),
                       borderRadius: BorderRadius.circular(16),
                     ),
-                    child: const Column(
+                    child: Column(
                       children: [
-                        Text('100',
+                        Text('${hero.intelligence}',
                         style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
                         Text('Intelligence'),
                       ]
